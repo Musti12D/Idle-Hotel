@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Idle Tycoon – Offizielle Website</title>
     <meta name="description" content="Hotel Idle Tycoon – süchtig machendes Idle-Game von einem unabhängigen Entwickler. Baue dein Hotel-Imperium und verdiene automatisch Geld. Kostenlos spielbar!">
+
+    <!-- GOOGLE ADSENSE SCRIPT (muss ganz oben im <head> stehen!) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6964291911588891"
+     crossorigin="anonymous"></script>
+
     <style>
         body {font-family: 'Segoe UI', Arial, sans-serif; text-align: center; background: #87CEEB; margin: 0; padding: 20px; color: #000; line-height: 1.6;}
         h1 {font-size: 52px; margin: 20px 0; text-shadow: 3px 3px 0px #00000033;}
@@ -14,6 +19,9 @@
         .blog {max-width: 900px; margin: 50px auto; text-align: left; background: #ffffffee; padding: 30px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.2);}
         .blog h2 {text-align: center; color: #8B4513;}
         footer {margin-top: 80px; font-size: 19px;}
+
+        /* Ads werden erst angezeigt, wenn AdSense approved ist */
+        .adsbygoogle {margin: 40px auto; max-width: 800px;}
     </style>
 </head>
 <body>
@@ -29,6 +37,19 @@
         Spieler online: <span id="players">2.184</span>
     </div>
 
+    <!-- GOOGLE ADSENSE WERBUNG (wird erst nach Approval sichtbar!) -->
+    <div class="adsbygoogle">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-6964291911588891"
+             data-ad-slot="1234567890"  <!-- Wird später von Google automatisch gefüllt -->
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
     <div class="blog">
         <h2>Entwickler-Update</h2>
         <p><strong>05.12.2025 – Version 1.3</strong><br>
@@ -37,7 +58,7 @@
         • Balance-Optimierungen basierend auf eurem Feedback</p>
 
         <p><strong>Projekt-Info</strong><br>
-        Dieses Spiel wird in meiner Freizeit entwickelt. Durch eure Unterstützung kann ich mehr Zeit investieren, neue Features (z. B. neue Gäste, Achievements, Sounds) schneller umsetzen und das Spiel langfristig erweitern.</p>
+        Dieses Spiel wird in meiner Freizeit entwickelt. Durch Werbung und eure Unterstützung kann ich mehr Zeit investieren und neue Features schneller umsetzen.</p>
     </div>
 
     <footer>
@@ -51,11 +72,11 @@
 
     <script>
         let count = 2184;
-        const el = document.getElementByCOUNTER('players');
+        const el = document.getElementById('players');
         setInterval(() => {
             count += Math.floor(Math.random() * 5) + 1;
             el.textContent = count.toLocaleString('de-DE');
-        }, 180000); // alle 3 Min
+        }, 180000);
     </script>
 </body>
 </html>
